@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { formatDate } from '@angular/common';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.page.html',
@@ -20,13 +21,28 @@ export class DemoPage implements OnInit {
   tenDaysAgo: string = '';
   oneYearAgo: string = '';
   submitted: boolean = false;
-  constructor() {
+  isWeekday: any;
+  platformPhone: any = 'phone';
+  constructor(
+    private platform: Platform
+  ) {
     const today = new Date();
     const tomorrow = new Date(today.getFullYear() + 5, today.getMonth(), today.getDate() + 1);
     this.minDate = this.formatDate(tomorrow);
     this.maxDate = this.formatDate(this.getFutureDate(100));
     this.today = this.formatDate(today);
     this.yesterday = this.formatDate(this.getPastDate(1));
+
+    this.isWeekday = (dateString: string) => {
+      const date = new Date(dateString);
+      const utcDay = date.getUTCDay();
+  
+      /**
+       * Date will be enabled if it is not
+       * Sunday or Saturday
+       */
+      return  utcDay !== 2;
+    };
   }
 
 
@@ -90,5 +106,6 @@ export class DemoPage implements OnInit {
     oneYearPastFormat.setFullYear(oneYearPastFormat.getFullYear() - 1);
     this.oneYearPastDate = this.formatDate(oneYearPastFormat);
 
+    
   }
 }

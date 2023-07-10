@@ -21,3 +21,11 @@ ion-menu-button {
     font-style: italic;
     color: blue !important;
 }
+.res-design-col {
+    @media screen and (max-width: 992px) {
+        --background: green !important;
+    }
+    @media screen and (max-width: 576px) {
+        --background: red !important;
+    }
+}

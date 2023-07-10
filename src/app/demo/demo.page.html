@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="res-design-col">
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -58,6 +58,10 @@
               <span class="item-date-label">1 Year Past Selected- </span>
               <span class="item-value">{{oneYearPastDate | date}}</span>
             </ion-label>
+          </ion-item>
+
+          <ion-item lines="full" style="border: 5px solid red;">
+            <ion-datetime [isDateEnabled]="isWeekday"></ion-datetime>
           </ion-item>
         </ion-list>
 
