@@ -1,6 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 import { formatDate } from '@angular/common';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-demo',
@@ -23,6 +31,7 @@ export class DemoPage implements OnInit {
   submitted: boolean = false;
   isWeekday: any;
   platformPhone: any = 'phone';
+  helloWorld: any = "Hello World";
   constructor(
     private platform: Platform
   ) {

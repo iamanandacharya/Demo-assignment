@@ -7,14 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { DemoPageRoutingModule } from './demo-routing.module';
 
 import { DemoPage } from './demo.page';
+import { OpenCloseComponent } from '../open-close/open-close.component';
 
 @NgModule({
+   
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     DemoPageRoutingModule
   ],
-  declarations: [DemoPage]
+   
+  declarations: [DemoPage, OpenCloseComponent]
 })
 export class DemoPageModule {}
