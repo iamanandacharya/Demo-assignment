@@ -1,0 +1,7 @@
+<p>
+  open-close works!
+  <ion-button type="click" (click)="toggle()">Toggle Open/Close</ion-button>
+</p>
+<div [@openClose]="isOpen ? 'open': 'close' " class="open-close-container">
+  <p> The box is open {{ isOpen ? 'open' : 'close' }} </p>
+</div>

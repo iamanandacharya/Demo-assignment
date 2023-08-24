@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <div class="header-title">
-      <h1>
-        Sample App with ion-datetime component
-      </h1>
+      <ion-text>
+        {{helloWorld}}
+      </ion-text>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -63,9 +63,13 @@
           <ion-item lines="full" style="border: 5px solid red;">
             <ion-datetime [isDateEnabled]="isWeekday"></ion-datetime>
           </ion-item>
+          <ion-item lines="full" style="border: 5px solid red;">
+            <app-open-close></app-open-close>
+          </ion-item>
         </ion-list>
 
       </ion-col>
     </ion-row>
   </ion-grid>
+
 </ion-content>
