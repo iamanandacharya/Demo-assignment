@@ -13,7 +13,7 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label position="stacked">Select a dates from future</ion-label>
+          <ion-label position="stacked">Select a date from future</ion-label>
           <ion-input (click)="openDateTimeCompo()" [(ngModel)]="selectedDate" placeholder="Select Date"></ion-input>
           <div *ngIf="enableDTComp">
             <ion-datetime presentation="date" displayFormat="YYYY-MM-dd" placeholder="Select Date" min="{{minDate}}"
